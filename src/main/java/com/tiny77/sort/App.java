@@ -1,6 +1,7 @@
 package com.tiny77.sort;
 
 import com.tiny77.sort.impl.InsertSort;
+import com.tiny77.sort.impl.ShellSort;
 import com.tiny77.sort.itf.Sortor;
 import com.tiny77.sort.util.SortorFactory;
 
@@ -10,8 +11,8 @@ import com.tiny77.sort.util.SortorFactory;
  */
 public class App {
 	public static void main(String[] args) throws Exception {
-		Sortor sortor = SortorFactory.getSortor(InsertSort.class);
-		int[] arr = sortor.randomArr(1000);
+		Sortor sortor = SortorFactory.getSortor(ShellSort.class);
+		int[] arr = sortor.randomArr(50000);
 		sortor.display(arr);
 		arr = sortor.sort(arr);
 		sortor.display(arr);
