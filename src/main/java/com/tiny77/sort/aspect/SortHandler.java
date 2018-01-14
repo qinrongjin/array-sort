@@ -32,8 +32,12 @@ public class SortHandler implements InvocationHandler {
 	}
 
 	private String getTimeScribe(long time) {
-		double d = time/60d;
-		return format.format(d).toString();
+		if(time > 6000) {
+			double d = time/60d;
+			return format.format(d).toString() + " s";
+		}else {
+			return time + "ms";
+		}
 	}
 
 }
