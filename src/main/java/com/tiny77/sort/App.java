@@ -10,7 +10,7 @@ import com.tiny77.sort.util.SortorFactory;
  */
 public class App {
 	public static void main(String[] args) throws Exception {
-		Sortor sortor = SortorFactory.getSortor(QuickSort.class);
+		Sortor sortor = SortorFactory.getSortor(HeapSort.class);
 		int[] arr = sortor.randomArr();
 		sortor.display(arr);
 		arr = sortor.sort(arr);
